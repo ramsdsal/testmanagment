@@ -198,7 +198,7 @@ sudo apt install -y mysql-server mysql-client
 sed -i 's/bind-address/bind-address = 0.0.0.0#/' /etc/mysql/mysql.conf.d/mysqld.cnf
 mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 service mysql restart
-mysql -uroot -proot </var/www/public/app/config/db.sql
+mysql -uroot -proot </var/www/html/app/config/db.sql
 
 #
 # Phalcon PHP Framework 3
