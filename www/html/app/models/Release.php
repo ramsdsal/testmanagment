@@ -4,7 +4,7 @@ use Phalcon\Validation;
 class Release extends BaseModel {
 
  private $id;
- private $name;
+ private $version;
  private $date;
  private $created_at;
  private $updated_at;
@@ -15,8 +15,8 @@ class Release extends BaseModel {
  public function getId() {
   return $this->id;
  }
- public function getName() {
-  return $this->name;
+ public function getVersion() {
+  return $this->version;
  }
  public function getDate() {
   return $this->date;
@@ -30,8 +30,8 @@ class Release extends BaseModel {
  public function setId($id) {
   $this->id = $id;
  }
- public function setName($name) {
-  $this->name = $name;
+ public function setVersion($name) {
+  $this->version = $name;
  }
  public function setDate($date) {
   $this->date = $date;
@@ -47,12 +47,12 @@ class Release extends BaseModel {
   $validator = new Validation();
 
   $validator->add(
-   'name',
+   'version',
    new Validation\Validator\StringLength([
     "max" => 15,
     "min" => 3,
-    "messageMaximum" => "Your password must be under 15 characters",
-    "messageMinimum" => "Your password must be atleast 3 characters",
+    "messageMaximum" => "Version name must be under 15 characters",
+    "messageMinimum" => "Version name must be atleast 3 characters",
    ])
   );
 

@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-md-3">&nbsp;</div>
         <div class="col-md-6">
-          <p class="pull-right"><a href="{{ url('testbeheren') }}"><< Testen beheren</a></p>
+          <p class="pull-right"><a class="btn btn-default" href="{{ url('testbeheren') }}">Testen beheren</a></p>
         </div>
         <div class="col-md-3">&nbsp;</div>
       </div>

@@ -19,5 +19,17 @@ class GlobalRoutes extends Group {
    'action' => 'index',
   ]);
 
+  $this->add('release/edit/:id', [
+   'controller' => 'release',
+   'action' => 'edit',
+   'params' => 3,
+  ]);
+
+  $this->add('update/:id', [
+   'controller' => 'release',
+   'action' => 'update',
+   'params' => 3,
+  ]);
+
  }
 }
